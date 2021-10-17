@@ -1,0 +1,33 @@
+package fr.onepoint.bowl;
+
+import org.apache.commons.lang3.ArrayUtils;
+
+import fr.onepoint.bowl.service.BowlingGame;
+import fr.onepoint.bowl.utils.Constants;
+
+/**
+ * 
+ * @author Dimitri
+ *
+ */
+public class Main {
+
+	//@link BowlingGame
+    private static BowlingGame game;
+
+    public static void main(String[] args) throws Exception {
+//    	String jeu = "X X X X X X X X X X --"; TEST OK
+//    	String jeu = "X X X X X X X X X X X X"; ok
+//    	String jeu = "9- 9- 9- 9- 9- 9- 9- 9- 9- 9-"; ok
+//    	String jeu = "5/ 5/ 5/ 5/ 5/ 5/ 5/ 5/ 5/ 5/5" ok
+//    	String jeu = "5/ 5/ 5/ 5/ 5/ 5/ 5/ 5/ 5/ 5/5 13"; ok
+//    	String jeu = "5/ 5/ 5/ 5/ 5/ 5/ 5/ 5/ 5/ 88"; //ok
+    	String[] arrayEntree = {Constants.ALL_NEUF_ET_ZERO, Constants.ALL_STRIKES, Constants.TOUS_CINQ_ET_SPARE};
+    	
+        for (String entree : arrayEntree) {
+            game = new BowlingGame();
+            game.commencerJeu(entree);
+			
+		}
+    }
+}
